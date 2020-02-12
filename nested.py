@@ -39,14 +39,18 @@ def is_nested(line):
         if x in a:
             tok += [x]
         elif x in b:
+            if tok == []:
+                print("NO " + str(i+1))
+                break
             if x == a.get(tok[-1]):
                 tok.pop()
             else:
                 print("NO " + str(i+1))
+                break
     print(tok)
 
 
-is_nested('(*a++(*)')
+is_nested('  a(()))-')
 # def main(args):
 #     """Open the input file and call `is_nested()` for each line"""
 #     # Results: print to console and also write to output file
