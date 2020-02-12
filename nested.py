@@ -55,9 +55,11 @@ def is_nested(line):
 
 def main(args):
     with open(args, 'r') as rf:
-        print(rf.read())
+        return rf.readlines()
 
     # Results: print to console and also write to output file
+
+
 print(main('input.txt'))
 
 # if __name__ == '__main__':
