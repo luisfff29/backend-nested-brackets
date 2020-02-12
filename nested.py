@@ -50,10 +50,12 @@ def is_nested(line):
                 break
     if tok == []:
         print("YES")
+    elif tok:
+        print("NO " + str(len(new_list)+1))
     print(tok)
 
 
-is_nested('  a(()))-')
+is_nested('    aaa(aaaa')
 # def main(args):
 #     """Open the input file and call `is_nested()` for each line"""
 #     # Results: print to console and also write to output file
