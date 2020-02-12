@@ -33,6 +33,14 @@ def is_nested(line):
             line = line[1:]
     print(new_list)
 
+    tok = []
+    for i, x in enumerate(new_list):
+        if x in a:
+            tok += [x]
+        elif x in b:
+            tok += [x]
+    print(tok)
+
 
 is_nested('(*a++(*)')
 # def main(args):
