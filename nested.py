@@ -1,7 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-Module docstring: One line description of what your program does.
+Write a program that checks whether expressions are properly nested. If the expression is not properly nested your program should determine the position of the offending bracket, that is the length of the shortest prefix of the expression that can not be extended to a properly nested expression. Don’t forget (* counts as one, as does *). The characters that are not brackets also count as one.
+The pairs of brackets are:
+    (  )
+    [  ]
+    {  }
+    <  >
+    (*  *)
 """
 __author__ = "luisfff29"
 
