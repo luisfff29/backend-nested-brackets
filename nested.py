@@ -31,7 +31,6 @@ def is_nested(line):
         else:
             new_list.append(token)
             line = line[1:]
-    print(new_list)
 
     a = dict(zip(a, b))
     tok = []
@@ -41,23 +40,20 @@ def is_nested(line):
         elif x in b:
             if tok == []:
                 tok += [x]
-                print("NO " + str(i+1))
-                break
+                return "NO " + str(i+1)
             if x == a.get(tok[-1]):
                 tok.pop()
             else:
-                print("NO " + str(i+1))
-                break
+                return "NO " + str(i+1)
     if tok == []:
-        print("YES")
+        return "YES"
     elif tok == new_list:
-        print("NO " + str(len(new_list)))
+        return "NO " + str(len(new_list))
     elif tok:
-        print("NO " + str(len(new_list)+1))
-    print(tok)
+        return "NO " + str(len(new_list)+1)
 
 
-is_nested('(([(')
+print(is_nested('(([('))
 # def main(args):
 #     """Open the input file and call `is_nested()` for each line"""
 #     # Results: print to console and also write to output file
