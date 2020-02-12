@@ -39,9 +39,11 @@ def is_nested(line):
         if x in a:
             tok += [x]
         elif x in b:
-            tok += [x]
+            if x == a.get(tok[-1]):
+                tok.pop()
+            else:
+                print("NO " + str(i+1))
     print(tok)
-    print(a)
 
 
 is_nested('(*a++(*)')
