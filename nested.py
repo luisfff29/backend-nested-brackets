@@ -58,7 +58,7 @@ def main(args):
         with open('output.txt', 'w') as wf:
             for x in rf.readlines():
                 print(is_nested(x.rstrip('/n')))
-                wf.write(is_nested(x.rstrip('/n')))
+                wf.write(is_nested(x.rstrip('/n')) + "\n")
     # Results: print to console and also write to output file
 
 
