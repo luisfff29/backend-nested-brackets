@@ -53,12 +53,12 @@ def is_nested(line):
         return "NO " + str(len(new_list)+1)
 
 
-print(is_nested('(([('))
-# def main(args):
-#     """Open the input file and call `is_nested()` for each line"""
-#     # Results: print to console and also write to output file
-#     pass
+def main(args):
+    with open(args, 'r') as rf:
+        print(rf.read())
 
+    # Results: print to console and also write to output file
+print(main('input.txt'))
 
 # if __name__ == '__main__':
 #     main(sys.argv[1:])
