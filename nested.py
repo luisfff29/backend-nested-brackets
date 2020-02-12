@@ -36,9 +36,9 @@ def is_nested(line):
     tok = []
     for i, x in enumerate(new_list):
         if x in a:
-            tok += [x]
+            tok += [x, i]
         elif x in b:
-            tok += [x]
+            tok += [x, i]
     print(tok)
 
 
