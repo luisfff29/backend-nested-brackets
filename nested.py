@@ -55,10 +55,10 @@ def is_nested(line):
 
 def main(args):
     with open(args, 'r') as rf:
-        for i in rf.readlines():
-            new_lines = i.rstrip()
-            results = is_nested(new_lines)
-            print(results)
+        with open('output.txt', 'w') as wf:
+            for x in rf.readlines():
+                print(is_nested(x.rstrip('/n')))
+                wf.write(is_nested(x.rstrip('/n')))
     # Results: print to console and also write to output file
 
 
