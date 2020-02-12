@@ -5,7 +5,7 @@ Module docstring: One line description of what your program does.
 """
 __author__ = "luisfff29"
 
-# import sys
+import sys
 
 
 def is_nested(line):
@@ -54,6 +54,9 @@ def is_nested(line):
 
 
 def main(args):
+    if len(sys.argv) != 2:
+        print('usage: python nested.py file-name')
+        sys.exit(1)
     with open(args, 'r') as rf:
         with open('output.txt', 'w') as wf:
             for x in rf.readlines():
@@ -62,7 +65,5 @@ def main(args):
     # Results: print to console and also write to output file
 
 
-print(main('input.txt'))
-
-# if __name__ == '__main__':
-#     main(sys.argv[1:])
+if __name__ == '__main__':
+    main(sys.argv[1])
