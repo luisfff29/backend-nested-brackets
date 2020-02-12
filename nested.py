@@ -9,7 +9,10 @@ __author__ = "luisfff29"
 
 
 def is_nested(line):
-    print(line)
+    new_list = []
+    for x in line:
+        new_list.append(x)
+    print(new_list)
 
 
 is_nested('(*a++(*)')
