@@ -40,6 +40,7 @@ def is_nested(line):
             tok += [x]
         elif x in b:
             if tok == []:
+                tok += [x]
                 print("NO " + str(i+1))
                 break
             if x == a.get(tok[-1]):
@@ -47,6 +48,8 @@ def is_nested(line):
             else:
                 print("NO " + str(i+1))
                 break
+    if tok == []:
+        print("YES")
     print(tok)
 
 
