@@ -9,14 +9,16 @@ __author__ = "luisfff29"
 
 
 def is_nested(line):
+    a = ("(*", "[", "{", "<", "(")
+    b = ("*)", "]", "}", ">", ")")
     new_list = []
     while line:
         token = line[0]
-        if line.startswith('(*'):
-            new_list.append('(*')
+        if line.startswith(a):
+            new_list.append(a)
             line = line[2:]
-        elif line.startswith('*)'):
-            new_list.append('*)')
+        elif line.startswith(b):
+            new_list.append(b)
             line = line[2:]
         else:
             new_list.append(token)
