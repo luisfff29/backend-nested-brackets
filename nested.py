@@ -57,8 +57,8 @@ def main(args):
     with open(args, 'r') as rf:
         for i in rf.readlines():
             new_lines = i.rstrip()
-            print(new_lines)
-
+            results = is_nested(new_lines)
+            print(results)
     # Results: print to console and also write to output file
 
 
