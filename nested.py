@@ -15,11 +15,19 @@ def is_nested(line):
     while line:
         token = line[0]
         if line.startswith(a):
-            new_list.append(a)
-            line = line[2:]
+            if line.startswith('(*'):
+                new_list.append('(*')
+                line = line[2:]
+                continue
+            new_list.append(token)
+            line = line[1:]
         elif line.startswith(b):
-            new_list.append(b)
-            line = line[2:]
+            if line.startswith('*)'):
+                new_list.append('*)')
+                line = line[2:]
+                continue
+            new_list.append(token)
+            line = line[1:]
         else:
             new_list.append(token)
             line = line[1:]
